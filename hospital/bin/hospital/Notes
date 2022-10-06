@@ -1,0 +1,26 @@
+	@ScheduledMethod(start = 1, interval = 1)
+	private void updatePatient() {
+		//méthode qui check s'il y a de nouveaux patients et les ajoute à la liste patients 
+		int sizePatient = patient.size(); 
+		Context<Object> context = ContextUtils.getContext(this);
+		ArrayList<Object> contexttab = new ArrayList<Object>() ; 
+		for (Object obj : context) {
+			contexttab.add(obj);
+		}
+		//si des patients ont déjà été rajoutés 
+		if (sizePatient < context.size()) {
+			int dif = context.size() - sizePatient; 
+			for (int i=1; i<=dif; i++) {
+				Object obj = contexttab.get(sizePatient+i); 
+				if (obj instanceof RedPatient) {
+					patient.get(0).add((Patient) obj);
+				}
+				else if (obj instanceof YellowPatient) {
+					patient.get(1).add((Patient) obj);
+				}
+				else if (obj instanceof GreenPatient) {
+					patient.get(2).add((Patient) obj);
+				}
+			}
+		}
+	}

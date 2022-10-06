@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+
+	<parameter name="randomSeed" displayName="Default Random Seed" type="int" defaultValue="__NULL__" />
+	
+	<parameter name="robot_count" displayName="Robot_Count" type="int" 
+						defaultValue="2" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	
+	<parameter name="red_patient_count" displayName="Red_Patient_Count" type="int" 
+						defaultValue="3" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	
+	<parameter name="yellow_patient_count" displayName="Yellow_Patient_Count" type="int" 
+						defaultValue="3" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	
+	<parameter name="green_patient_count" displayName="Green_Patient_Count" type="int" 
+						defaultValue="3" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+
+</parameters>
